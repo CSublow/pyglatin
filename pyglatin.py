@@ -24,12 +24,15 @@ while translate == True:
 
     # Turn the inputted word into a list
     list_word = list(user_input)
+    # Python works on working_list_word to create the pyglatin word
+    # This keeps the original list intact so python can loop through it correctly
     working_list_word = list(list_word)
     later_vowel = False
 
     # For each character in the inputted word
     for x in list_word:
-        # If a vowel is found first, we don't need to worry about any consonants. So we just convert the word into a string, add the suffix and print it, breaking from the loop
+        # If a vowel is found first, we don't need to worry about any consonants
+        # So we just convert the word into a string, add the suffix and print it, breaking from the loop
         if x in vowels:
             # If the vowel is found AFTER a consonant, we need to add the consonant suffix
             if later_vowel == True:
