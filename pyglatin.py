@@ -75,7 +75,7 @@ while translate == True:
     if response.lower() == "no":
         print("Exiting program...")
         # Break out of the loop
-        eng_pyg_translate = False
+        translate = False
     # If the user types yes, the while loop will go back to the beginning
 
 
