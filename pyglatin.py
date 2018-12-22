@@ -4,9 +4,6 @@ print("Pyglatin is an argot which rearranges words to conceal their meaning from
 print("You convert a word to pig latin by transferring the initial consonant or consonant cluster of the word to the end of the word with -ay appended to the end.\n")
 print("If the word starts with a vowel (including y), append -yay to the end. For example, \"pig\" would become igpay (taking the 'p' and 'ay' to create a suffix\n\n")
 
-# Get user input and make sure it is lower case so it can be compared across lower and upper cases
-user_input = input("Please enter your word to translate to Pyglatin: ").lower()
-
 # Create a list of consonants and vowels
 consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 vowels = ["a", "e", "i", "o", "u"]
@@ -18,15 +15,18 @@ v_suffix = "yay"
 # Counter to use to make sure that a word is always outputted
 counter = 0
 
-# Turn the inputted word into a list
-list_word = list(user_input)
-working_list_word = list(list_word)
-later_vowel = False
-
 # Variable used for while loop, kept true as long as the user wants to translate words
 translate = True
 
 while translate == True:
+    # Get user input and make sure it is lower case so it can be compared across lower and upper cases
+    user_input = input("Please enter your word to translate to Pyglatin: ").lower()
+
+    # Turn the inputted word into a list
+    list_word = list(user_input)
+    working_list_word = list(list_word)
+    later_vowel = False
+
     # For each character in the inputted word
     for x in list_word:
         # If a vowel is found first, we don't need to worry about any consonants. So we just convert the word into a string, add the suffix and print it, breaking from the loop
