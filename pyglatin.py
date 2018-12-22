@@ -30,12 +30,10 @@ for x in list_word:
         # If the vowel is found AFTER a consonant, we need to add the consonant suffix
         if later_vowel == True:
             pyg_word = ''.join(working_list_word).capitalize() + c_suffix
-            print(pyg_word)
             break
         # If the vowel is the first character found, we want to add the vowel suffix
         else:
             pyg_word = ''.join(working_list_word).capitalize() + v_suffix
-            print(pyg_word)
             break
     # If a consonant is found
     elif x in consonants:
@@ -45,9 +43,10 @@ for x in list_word:
         # Once the counter is the same amount as the length of the word, this means that no vowels are in the word. So format the word and output it
         if counter == len(working_list_word):
             pyg_word = ''.join(working_list_word).capitalize() + c_suffix
-            print(pyg_word)
             break
         later_vowel = True
+
+print(pyg_word)
 
 # Exit the loop unless the user wants to translate another word
 print("Do you want to translate another word?")
