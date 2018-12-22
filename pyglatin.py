@@ -1,5 +1,11 @@
+#Introduction
+print("Pyglatin Translator\n")
+print("Pyglatin is an argot which rearranges words to conceal their meaning from people unfamiliar with the rules.\n")
+print("You convert a word to pig latin by transferring the initial consonant or consonant cluster of the word to the end of the word with -ay appended to the end.\n")
+print("If the word starts with a vowel (including y), append -yay to the end. For example, \"pig\" would become igpay (taking the 'p' and 'ay' to create a suffix\n\n")
+
 # Get user input and make sure it is lower case so it can be compared across lower and upper cases
-user_input = input("Please enter your word: ").lower()
+user_input = input("Please enter your word to translate to Pyglatin: ").lower()
 
 # Create a list of consonants and vowels
 consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
